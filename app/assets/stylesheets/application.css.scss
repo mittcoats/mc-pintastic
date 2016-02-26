@@ -129,7 +129,7 @@ nav {
 	.pin_image {
 		img {
 			max-width: 100%;
-			width: 100;
+			width: 100%;
 			display: block;
 			margin: 0 auto;
 		}
@@ -156,6 +156,49 @@ nav {
 		}
 	}
 }
+
+#new_pin {
+	.row {
+		background: $fu-dark-gray;
+	}
+	h1 {
+		color: $fu-dark-gray;
+	}
+	label {
+		color: $fu-white;
+	}
+}
+
+#edit_pin {
+	h1 {
+		color: $fu-dark-gray;
+	}
+}
+
+#new_registration {
+	h1, h2 {
+		color: $fu-dark-gray;
+	}
+}
+
+#edit_registration {
+	h1, h2 {
+		color: $fu-dark-gray;
+	}
+	p {
+		font-size: .8em;
+		color: $fu-dark-gray;
+		opacity: 0.5;
+	}
+	.panel-footer {
+		h3 {
+			font-size: 1em;
+			color: $fu-dark-gray;
+		}
+	}
+}
+
+
 
 textarea {
 	min-height: 250px;
