@@ -10,9 +10,153 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require 'masonry/transitions'
  *= require_tree .
  *= require_self
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@font-face {
+  font-family: "League Spartan";
+  src: url(/assets/LeagueSpartan-Bold.otf) format("truetype");
+}
+
+$font-header: 'League Spartan', helvetica, sans-serif;
+$font-text: 'Montserrat', helvetica, sans-serif;
+
+$fu-red: #981B1E;
+$fu-yellow: #e2be00;
+$fu-orange:	#d57c00;
+$fu-blue: #233bbd;
+$fu-light-gray: #E6E6E6;
+$fu-dark-gray: #3D3D3D;
+$fu-black: #111111;
+$fu-white: #FFFAFA;
+
+body {
+	background: $fu-black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+	font-family: $font-header;
+	color: $fu-white;
+}
+
+a, p {
+	font-weight: 200;
+	font-family: $font-text;
+	color: $fu-blue;
+}
+
+
+
+nav {
+	box-shadow: 0 1px 2px 0 $fu-light-gray;
+	.navbar-default {
+		background: $fu-dark-gray;	
+		border: 0 3px 0 0 solid $fu-light-gray;
+		border-radius: 0px;
+	}
+	.navbar-brand {
+		a {
+			color: $fu-red;
+			font-weight: bold;
+			font-family: $font-header;
+			text-transform: uppercase;
+			&:hover {
+				text-decoration: none;
+				color: $fu-orange;
+				transition: 0.5s ease;
+			}
+		}
+	}
+}
+
+#pins {
+	margin: 0 auto;
+	width: 100%;
+	.panel-default {
+		border: 2px solid $fu-dark-gray;
+	}
+	.box {
+		margin: 10px;
+		width: 350px;
+		box-shadow: 01 1px 2px 0 $fu-light-gray;
+		border-radius: 7px;
+		text-align: center;
+		img {
+    	max-width: 100%;
+    	height: auto; 
+    	border-bottom: 5px $fu-red solid;
+		}
+		h2 {
+			font-size: 22px;
+			margin: 0;
+			padding: 25px 10px;
+			a {
+				color: $fu-dark-gray;
+			}
+		}
+		.user {
+			font-size: 12px;
+			border-top: 1px solid $fu-light-gray;
+			padding: 15px;
+			margin: 0;
+		}
+	}
+}
+
+#edit_page {
+	.current_image {
+		img {
+			display: block;
+			margin: 20px 0;
+		}
+	}
+}
+
+#pin_show {
+	.panel-heading {
+		padding: 0;
+		border-bottom: 5px $fu-red solid;
+	}
+	.panel-default {
+		border: 2px solid $fu-dark-gray;
+	}
+	.pin_image {
+		img {
+			max-width: 100%;
+			width: 100;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.panel-body {
+		padding: 35px;
+		h1 {
+			margin: 0 0 10px 0;
+			color: $fu-dark-gray;
+		}
+		.description {
+			color: $fu-dark-gray;
+			line-height: 1.75;
+			margin: 0;
+		}
+	}
+	.panel-footer {
+		padding: 20px 35px;
+		p {
+			margin: 0;
+		}
+		.user {
+			padding-top: 8px;
+		}
+	}
+}
+
+textarea {
+	min-height: 250px;
+}
